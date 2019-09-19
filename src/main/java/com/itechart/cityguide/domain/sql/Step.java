@@ -1,17 +1,17 @@
-package com.itechart.cityguide.domain;
+package com.itechart.cityguide.domain.sql;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.List;
 
 @Data
 @Entity
 public class Step {
     @Id
+    @GeneratedValue
     private Long id;
     private String description;
-    private List<String> pictures;
     private Location location;
 }
