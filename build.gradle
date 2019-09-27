@@ -21,6 +21,9 @@ configurations {
 repositories {
     mavenCentral()
 }
+jar{
+
+}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
