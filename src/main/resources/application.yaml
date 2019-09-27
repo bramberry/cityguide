@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost/cityguide?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update

@@ -6,10 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity
@@ -17,17 +17,16 @@ public class GuideEntity {
     @Id
     @GeneratedValue
     private Long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(nullable = false)
     private User author;
-    @OneToMany(mappedBy = "entity")
+    @OneToMany(mappedBy = "guide")
     private List<Step> steps;
-    @OneToMany(mappedBy = "entity")
-    private Set<User> likes;
-    @OneToMany(mappedBy = "entity")
-    private Set<User> dislikes;
-    @OneToMany(mappedBy = "entity")
+    //TODO complete likes task
+    private Long likes;
+    @OneToMany(mappedBy = "guide")
     private List<Comment> comments;
-    @OneToMany(mappedBy = "entity")
+    @OneToOne
+    @JoinColumn(nullable = false)
     private Location cityLocation;
 }

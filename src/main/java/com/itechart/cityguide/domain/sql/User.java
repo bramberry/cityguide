@@ -8,10 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
+import java.util.Set;
 
 @Data
 @Entity
@@ -28,6 +29,6 @@ public class User {
     @CreationTimestamp
     private Date registrationDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private GuideEntity guide;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    private Set<GuideEntity> guide;
 }
