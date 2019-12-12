@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.Set;
 
 @Data
-@Entity
+@Entity(name = "users")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

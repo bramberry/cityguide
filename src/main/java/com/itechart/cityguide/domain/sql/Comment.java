@@ -21,5 +21,6 @@ public class Comment {
     private User user;
     private String text;
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false)
     private GuideEntity guide;
 }

@@ -21,5 +21,6 @@ public class Step {
     @JoinColumn
     private Location location;
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false)
     private GuideEntity guide;
 }
