@@ -22,7 +22,7 @@ public class GuideEntity {
     private User author;
     @OneToMany(mappedBy = "guide")
     private List<Step> steps;
-    //TODO complete likes task
+
     private Long likes;
     @OneToMany(mappedBy = "guide")
     private List<Comment> comments;
