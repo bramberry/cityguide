@@ -1,4 +1,4 @@
-package com.itechart.cityguide.domain.sql;
+package com.romanshulha.cityguide.domain.sql;
 
 import lombok.Data;
 
@@ -9,9 +9,9 @@ import javax.persistence.Id;
 @Data
 @Entity
 public class Location {
-    @Id
-    @GeneratedValue
-    private Long id;
-    private Long lon;
-    private Long lat;
+  @Id
+  @GeneratedValue
+  private Long id;
+  private Long lon;
+  private Long lat;
 }

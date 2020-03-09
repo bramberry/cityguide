@@ -1,6 +1,6 @@
-package com.itechart.cityguide.repository;
+package com.romanshulha.cityguide.repository;
 
-import com.itechart.cityguide.domain.sql.GuideEntity;
+import com.romanshulha.cityguide.domain.sql.GuideEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

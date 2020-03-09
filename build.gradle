@@ -1,10 +1,11 @@
 plugins {
     id 'org.springframework.boot' version '2.1.8.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'com.github.sherter.google-java-format' version '0.8'
     id 'java'
 }
 
-group = 'com.itechart'
+group = 'com.romanshulha'
 version = '0.0.1'
 sourceCompatibility = '1.8'
 
@@ -20,9 +21,14 @@ configurations {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 jar{
 
+}
+
+googleJavaFormat {
+    options style: 'GOOGLE'
 }
 
 dependencies {
@@ -35,6 +41,8 @@ dependencies {
     implementation 'org.springframework.security:spring-security-core'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     //implementation 'org.springframework.kafka:spring-kafka'
+    // https://mvnrepository.com/artifact/com.coveo/fmt-maven-plugin
+    compile 'com.google.googlejavaformat:google-java-format:1.7'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
