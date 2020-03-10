@@ -1,21 +1,18 @@
 package com.romanshulha.cityguide.domain.sql;
 
-import lombok.Data;
-
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import java.util.List;
+import lombok.Data;
 
 @Data
 @Entity
 public class GuideEntity {
-  @Id
-  @GeneratedValue
-  private Long id;
+  @Id @GeneratedValue private Long id;
 
   private Long authorId;
 
